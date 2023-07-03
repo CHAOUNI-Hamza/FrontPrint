@@ -3,8 +3,8 @@
             <div class="header-top">
                 <div class="container">
                     <div class="header-left">
-                        <a class="mr-3" href="tel:#"><i class="icon-phone"></i>Tél. : 06 55 72 81 55</a>
-                        <a href="tel:#"><i class="icon-whatsapp"></i>Wha. : 06 55 72 81 55</a>
+                        <a class="mr-3" href="tel:0655728155"><i class="icon-phone"></i>Tél. : 06 55 72 81 55</a>
+                        <a href="https://wa.me/0655728155"><i class="icon-whatsapp"></i>Wha. : 06 55 72 81 55</a>
                     </div><!-- End .header-left -->
 
                     <div class="header-right">
@@ -33,6 +33,8 @@
 
                 </div><!-- End .container -->
             </div><!-- End .header-top -->
+
+            
 
             <div class="header-middle">
                 <div class="container">
@@ -499,11 +501,214 @@
         </div><!-- End .social-icons -->
     </div><!-- End .mobile-menu-wrapper -->
 </div><!-- End .mobile-menu-container -->
+
+
+<!-- Sign in / Register Modal -->
+<div class="modal fade" id="signin-modal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><i class="icon-close"></i></span>
+                    </button>
+
+                    <div class="form-box">
+                        <div class="form-tab">
+                            <ul class="nav nav-pills nav-fill nav-border-anim" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="signin-tab" data-toggle="tab" href="#signin" role="tab" aria-controls="signin" aria-selected="true">Connexion</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="register-tab" data-toggle="tab" href="#register" role="tab" aria-controls="register" aria-selected="false">Inscription</a>
+                                </li>
+                            </ul>
+                            <div class="tab-content" id="tab-content-5">
+                                <div class="tab-pane fade show active" id="signin" role="tabpanel" aria-labelledby="signin-tab">
+                                    <form action="#">
+                                        <div class="form-group">
+                                            <label for="singin-email">Nom d'utilisateur ou adresse e-mail</label>
+                                            <input type="text" class="form-control" id="singin-email" name="singin-email" required>
+                                        </div><!-- End .form-group -->
+
+                                        <div class="form-group">
+                                            <label for="singin-password">Mot de passe</label>
+                                            <input type="password" class="form-control" id="singin-password" name="singin-password" required>
+                                        </div><!-- End .form-group -->
+
+                                        <div class="form-footer">
+                                            <button type="submit" class="btn btn-outline-primary-2">
+                                                <span>Connexion</span>
+                                                <i class="icon-long-arrow-right"></i>
+                                            </button>
+
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="signin-remember">
+                                                <label class="custom-control-label" for="signin-remember">Se souvenir de moi</label>
+                                            </div><!-- End .custom-checkbox -->
+
+                                            <a href="#" class="forgot-link">Mot de passe oublié?</a>
+                                        </div><!-- End .form-footer -->
+                                    </form>
+                                    <div class="form-choice">
+                                        <p class="text-center">ou connectez-vous avec</p>
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <a href="#" class="btn btn-login btn-g">
+                                                    <i class="icon-google"></i>
+                                                    avec Google
+                                                </a>
+                                            </div><!-- End .col-6 -->
+                                            <div class="col-sm-6">
+                                                <a href="#" class="btn btn-login btn-f">
+                                                    <i class="icon-facebook-f"></i>
+                                                    avec Facebook
+                                                </a>
+                                            </div><!-- End .col-6 -->
+                                        </div><!-- End .row -->
+                                    </div><!-- End .form-choice -->
+                                </div><!-- .End .tab-pane -->
+                                <div class="tab-pane fade" id="register" role="tabpanel" aria-labelledby="register-tab">
+                                    <form action="#">
+                                        <div class="form-group">
+                                            <label for="register-email">Votre adresse e-mail</label>
+                                            <input type="email" class="form-control" id="register-email" name="register-email" required>
+                                        </div><!-- End .form-group -->
+
+                                        <div class="form-group">
+                                            <label for="register-password">Mot de passe</label>
+                                            <input type="password" class="form-control" id="register-password" name="register-password" required>
+                                        </div><!-- End .form-group -->
+
+                                        <div class="form-footer">
+                                            <button type="submit" class="btn btn-outline-primary-2">
+                                                <span>S'INSCRIRE</span>
+                                                <i class="icon-long-arrow-right"></i>
+                                            </button>
+
+                                            <div class="custom-control custom-checkbox">
+                                                <input type="checkbox" class="custom-control-input" id="register-policy" required>
+                                                <label class="custom-control-label" for="register-policy">D'accord <a href="#">Politique de confidentialité</a></label>
+                                            </div><!-- End .custom-checkbox -->
+                                        </div><!-- End .form-footer -->
+                                    </form>
+                                    <div class="form-choice">
+                                        <p class="text-center">ou connectez-vous avec</p>
+                                        <div class="row">
+                                            <div class="col-sm-6">
+                                                <a href="#" class="btn btn-login btn-g">
+                                                    <i class="icon-google"></i>
+                                                    avec Google
+                                                </a>
+                                            </div><!-- End .col-6 -->
+                                            <div class="col-sm-6">
+                                                <a href="#" class="btn btn-login btn-f">
+                                                    <i class="icon-facebook-f"></i>
+                                                    avec Facebook
+                                                </a>
+                                            </div><!-- End .col-6 -->
+                                        </div><!-- End .row -->
+                                    </div><!-- End .form-choice -->
+                                </div><!-- .End .tab-pane -->
+                            </div><!-- End .tab-content -->
+                        </div><!-- End .form-tab -->
+                    </div><!-- End .form-box -->
+                </div><!-- End .modal-body -->
+            </div><!-- End .modal-content -->
+        </div><!-- End .modal-dialog -->
+    </div><!-- End .modal -->
+
+
   </template>
   
-  <style>
+  <style scoped>
 .header-intro-clearance .header-bottom .container::after {
     height: 0;
+}
+.nav.nav-pills .nav-item.show .nav-link, .nav.nav-pills .nav-item .nav-link.active {
+    background: white;
+    color: #1f2d3d;
+    border-bottom-color: #1f2d3d;
+}
+.modal .form-box {
+    max-width: 575px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff;
+    padding: 3.2rem 5rem 4.4rem;
+    box-shadow: 0 3px 16px rgba(51,51,51,0.1);
+}
+.modal .form-control {
+    height: 40px;
+    padding: 0.85rem 2rem;
+    font-size: 1.4rem;
+    line-height: 1.5;
+    font-weight: 300;
+    color: #777;
+    background-color: #fafafa;
+    border: 1px solid #ebebeb;
+    border-radius: 0;
+    margin-bottom: 2rem;
+    transition: all 0.3s;
+    box-shadow: none;
+}
+.modal .form-tab .form-group {
+    text-align: left;
+}
+.modal .modal-body {
+    padding: 0;
+}
+.modal label:not(.form-check-label):not(.custom-file-label) {
+    font-weight: normal;
+}
+.modal .custom-control-label {
+    position: static;
+    margin-bottom: 0;
+    margin-top: 0.1rem;
+    font-size: 1.4rem;
+    padding-left: 2.6rem;
+    margin-left: -2.6rem;
+}
+.modal .custom-control-label::before {
+    left: -8px;
+    top: 0.3rem;
+    width: 1.6rem;
+    height: 1.6rem;
+    background-color: #f9f9f9;
+    border: 1px solid #dadada;
+    box-shadow: none !important;
+}
+.modal .custom-checkbox .custom-control-label::after {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background-image: none;
+    font-size: 1rem;
+    font-family: 'molla';
+    content: '\ec2d';
+    line-height: 1;
+    text-align: center;
+    opacity: 0;
+    margin-top: 0.1rem;
+    visibility: hidden;
+    transition: opacity .01s;
+}
+.modal .btn-outline-primary-2 {
+    border: 1px solid #3399ff;
+    border-radius: 0;
+    padding: 8px;
+    font-size: 12px;
+    color: #3399ff;
+}
+.modal .btn-outline-primary-2:hover {
+    color: #ffffff;
+}
+.modal .custom-checkbox .custom-control-input:checked ~ .custom-control-label::after {
+    background-image: none;
+    opacity: 1;
+    visibility: visible;
+    left: -5px;
+    top: 5px;
 }
   </style>
   

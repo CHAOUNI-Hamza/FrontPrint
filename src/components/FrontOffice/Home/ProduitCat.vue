@@ -612,4 +612,7 @@
 .product-media img {
     height: 238px;
 }
+.nav.nav-pills .nav-item.show .nav-link, .nav.nav-pills .nav-item .nav-link.active {
+    color: #fff;
+}
 </style>

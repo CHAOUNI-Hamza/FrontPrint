@@ -43,7 +43,7 @@
                 </div><!-- End .row -->
             </div><!-- End .container -->
 </template>
-<style>
+<style scoped>
 .banner img {
     display: block;
     max-width: none;

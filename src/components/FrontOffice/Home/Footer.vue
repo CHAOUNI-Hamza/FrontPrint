@@ -88,7 +88,7 @@
 	        </div><!-- End .footer-bottom -->
         </footer><!-- End .footer -->
 </template>
-<style>
+<style scoped>
 .footer {
     background-color: #f5f6f9;
     margin-top: 50px;
