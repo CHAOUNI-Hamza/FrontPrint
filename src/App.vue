@@ -1,16 +1,12 @@
 <template>
   <Navbar />
-  <Carousel />
-  <Garanties />
-  <Personnalise />
-  <Client />
-  <ProduitCat />
+  <router-view/>
   <Footer />
   <!--<nav>
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link>
   </nav>-->
-  <router-view/>
+  
 </template>
 
 <style>

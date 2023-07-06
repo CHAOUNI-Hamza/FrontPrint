@@ -1,3 +1,7 @@
 <template>
-    <div>test</div>
+    <Carousel />
+  <Garanties />
+  <Personnalise />
+  <Client />
+  <ProduitCat />
 </template>
