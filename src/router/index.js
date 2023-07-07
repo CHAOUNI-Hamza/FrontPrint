@@ -3,6 +3,7 @@ import Home from '../views/FrontOffice/Home.vue'
 import Cart from '../views/FrontOffice/Cart.vue'
 import Wishlist from '../views/FrontOffice/Wishlist.vue'
 import Checkout from '../views/FrontOffice/Checkout.vue'
+import Settings from '../views/FrontOffice/Settings.vue'
 
 const routes = [
   {
@@ -24,6 +25,11 @@ const routes = [
     path: '/caisse', 
     name: 'caisse',
     component: Checkout
+  },
+  {
+    path: '/parametres', 
+    name: 'parametres',
+    component: Settings
   },
   {
     path: '/about',
