@@ -113,14 +113,76 @@
 </form>
                     </div><!-- .End .tab-pane -->
                     <div class="tab-pane p-0 fade" id="new-computers-tab" role="tabpanel" aria-labelledby="new-computers-link">
+
                         <form action="">
                             <div class="row">
-                            <div class="col-md-8"></div>
-                            <div class="col-md-4">
-                                <a href="#signin-modal" data-toggle="modal" type="submit" class="btn btn-outline-primary-2">
+                            <div class="col-md-9">
+                              <form style="margin: 0 30px;">
+                            <div class="row justify-content-center" style="text-align: left;">
+                                <div class="col-md-5">
+                                    <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Prénom</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Nom</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Société</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Adresse 1</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Adresse 2</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Adresse 3</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+  </div>
+
+  <button type="submit" class="btn btn-outline-primary-2">
+    <span>Ajouter</span>
+    <i class="icon-long-arrow-right"></i>
+  </button>
+                                </div>
+                                <div class="col-md-5">
+                                    <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Ville</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Pays</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Département ou région</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Téléphone</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputEmail1" class="form-label">Email</label>
+    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+  </div>
+                                </div>
+                            </div>
+
+</form>
+                            </div>
+                            <div class="col-md-3" style="text-align: left;">
+                                <a href="#signin-modal" type="submit" class="btn btn-outline-primary-2">
     <span>Ajouter une nouvelle adresse</span>
     <i class="fa fa-plus" aria-hidden="true"></i>
                                 </a>
+
+
                             </div>
                         </div>
                             <div class="row container p-5">
@@ -169,6 +231,10 @@
                     </div>
                 </div>
             </div>
+
+
+
+
 </template>
 <style scoped>
 .nav.nav-pills .nav-item.show .nav-link, .nav.nav-pills .nav-item .nav-link.active {

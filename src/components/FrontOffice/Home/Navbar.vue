@@ -18,7 +18,7 @@
                                             <a href="#">Hamza CHAOUNI</a>
                                             <div class="header-menu">
                                                 <ul>
-                                                    <li><a href="#">Profile</a></li>
+                                                    <li><router-link :to="{ name: 'parametres' }">Profile</router-link></li>
                                                     <li><a href="#">Historique</a></li>
                                                     <li><a href="#">Se deconneter</a></li>
                                                 </ul>

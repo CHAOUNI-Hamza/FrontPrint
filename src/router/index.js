@@ -4,6 +4,7 @@ import Cart from '../views/FrontOffice/Cart.vue'
 import Wishlist from '../views/FrontOffice/Wishlist.vue'
 import Checkout from '../views/FrontOffice/Checkout.vue'
 import Settings from '../views/FrontOffice/Settings.vue'
+import Product from '../views/FrontOffice/Product.vue'
 
 const routes = [
   {
@@ -30,6 +31,11 @@ const routes = [
     path: '/parametres', 
     name: 'parametres',
     component: Settings
+  },
+  {
+    path: '/produit', 
+    name: 'produit',
+    component: Product
   },
   {
     path: '/about',
