@@ -5,6 +5,8 @@ import Wishlist from '../views/FrontOffice/Wishlist.vue'
 import Checkout from '../views/FrontOffice/Checkout.vue'
 import Settings from '../views/FrontOffice/Settings.vue'
 import Product from '../views/FrontOffice/Product.vue'
+import Category from '../views/FrontOffice/Category.vue'
+import Orders from '../views/FrontOffice/Orders.vue'
 
 const routes = [
   {
@@ -36,6 +38,16 @@ const routes = [
     path: '/produit', 
     name: 'produit',
     component: Product
+  },
+  {
+    path: '/categorie', 
+    name: 'categorie',
+    component: Category
+  },
+  {
+    path: '/orders', 
+    name: 'orders',
+    component: Orders
   },
   {
     path: '/about',

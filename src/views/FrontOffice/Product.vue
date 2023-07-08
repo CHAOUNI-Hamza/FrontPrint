@@ -112,12 +112,7 @@
                                 <div class="product-details">
                                     <h1 class="product-title">X-banner évasée en dentelle jaune foncé découpée</h1><!-- End .product-title -->
 
-                                    <div class="ratings-container">
-                                        <div class="ratings">
-                                            <div class="ratings-val" style="width: 80%;"></div><!-- End .ratings-val -->
-                                        </div><!-- End .ratings -->
-                                        <a class="ratings-text" href="#product-review-link" id="review-link">( 2 Reviews )</a>
-                                    </div><!-- End .rating-container -->
+                                    
 
                                     
 
