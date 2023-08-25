@@ -96,4 +96,48 @@
 .footer .widget {
     text-align: left;
 }
+
+/* Media query */
+@media screen and (max-width: 768px) {
+	.footer {
+    background-color: #f5f6f9;
+    margin-top: 50px;
+}
+.cta.bg-image {
+    padding: 30px;
+}
+.footer .input-group-round .form-control {
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+	border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+.footer .btn-primary {
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+	border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+.footer-payments img {
+	max-width: 100% !important;
+}
+	.footer .widget {
+    text-align: center;
+}
+.widget img {
+	display: inline;
+}
+.widget-about p {
+    max-width: 100%;
+}
+.widget-about .widget-call {
+    max-width: 100%;
+}
+}
+@media screen and (max-width: 992px) {
+	.footer-payments img {
+	max-width: 100% !important;
+}
+}
+
 </style>

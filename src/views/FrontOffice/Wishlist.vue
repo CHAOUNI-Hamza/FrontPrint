@@ -228,7 +228,44 @@
 tr {
     text-align: left;
 }
-
+/* Media query */
+@media screen and (max-width: 768px) {}
+@media screen and (max-width: 991px) {
+	.page-content {
+    padding: 17px;
+}
+.table-mobile tr .action-col .btn, .table-mobile tr .action-col .dropdown {
+    max-width: 275px;
+}
+	.table-mobile tr {
+    margin-bottom: 20px;
+	border: 1px solid #eef0f2;
+	padding-bottom: 1rem;
+}
+.table-mobile {
+    border: none;
+}
+.table td {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.remove-col {
+	border: none;
+}
+.cart-bottom {
+	align-items: normal;
+}
+.cart-discount .btn {
+    min-width: 51px;
+}
+.icon-close {
+    background: #38aaf9;
+    padding: 3px;
+    border-radius: 50%;
+    color: white;
+    margin-bottom: 10px;
+}
+}
 
 
 </style>

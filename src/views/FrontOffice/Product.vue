@@ -327,4 +327,22 @@
     font-size: 15px;
     color: #ffffff;
 }
+/* Media query */
+@media screen and (max-width: 768px) {
+}
+@media screen and (max-width: 992px) {
+    .page-content {
+        padding: 2rem;
+    }
+    .details-filter-row {
+    display: inline-block !important;
+    margin-left: 25px;
+}
+.btn-cart {
+    min-width: 100%;
+}
+.btn-devis {
+    margin: 20px 0;
+}
+}
 </style>

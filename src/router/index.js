@@ -7,6 +7,7 @@ import Settings from '../views/FrontOffice/Settings.vue'
 import Product from '../views/FrontOffice/Product.vue'
 import Category from '../views/FrontOffice/Category.vue'
 import Orders from '../views/FrontOffice/Orders.vue'
+import ResetPassword from '../views/FrontOffice/ResetPassword.vue'
 
 const routes = [
   {
@@ -48,6 +49,11 @@ const routes = [
     path: '/orders', 
     name: 'orders',
     component: Orders
+  },
+  {
+    path: '/reset-password/:token', 
+    name: 'reset-password',
+    component: ResetPassword
   },
   {
     path: '/about',

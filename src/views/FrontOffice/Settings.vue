@@ -54,7 +54,7 @@
     <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
   </div>
 
-  <button type="submit" class="btn btn-outline-primary-2">
+  <button type="submit" class="btn btn-outline-primary-2 pc-button">
     <span>Mise à jour</span>
     <i class="icon-long-arrow-right"></i>
   </button>
@@ -80,6 +80,10 @@
     <label for="exampleInputEmail1" class="form-label">Site Web</label>
     <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
   </div>
+  <button type="submit" class="btn btn-outline-primary-2 pc-mobile">
+    <span>Mise à jour</span>
+    <i class="icon-long-arrow-right"></i>
+  </button>
                                 </div>
                             </div>
 
@@ -114,10 +118,10 @@
                     </div><!-- .End .tab-pane -->
                     <div class="tab-pane p-0 fade" id="new-computers-tab" role="tabpanel" aria-labelledby="new-computers-link">
 
-                        <form action="">
+                        
                             <div class="row">
                             <div class="col-md-9">
-                              <form style="margin: 0 30px;">
+                              <form>
                             <div class="row justify-content-center" style="text-align: left;">
                                 <div class="col-md-5">
                                     <div class="mb-3">
@@ -145,7 +149,7 @@
     <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
   </div>
 
-  <button type="submit" class="btn btn-outline-primary-2">
+  <button type="submit" class="btn btn-outline-primary-2 pc-button">
     <span>Ajouter</span>
     <i class="icon-long-arrow-right"></i>
   </button>
@@ -171,13 +175,17 @@
     <label for="exampleInputEmail1" class="form-label">Email</label>
     <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
   </div>
+  <button type="submit" class="btn btn-outline-primary-2 pc-mobile">
+    <span>Ajouter</span>
+    <i class="icon-long-arrow-right"></i>
+  </button>
                                 </div>
                             </div>
 
 </form>
                             </div>
-                            <div class="col-md-3" style="text-align: left;">
-                                <a href="#signin-modal" type="submit" class="btn btn-outline-primary-2">
+                            <div class="col-md-3">
+                                <a href="#signin-modal" type="submit" style="margin: 30px 0;" class="btn btn-outline-primary-2">
     <span>Ajouter une nouvelle adresse</span>
     <i class="fa fa-plus" aria-hidden="true"></i>
                                 </a>
@@ -212,7 +220,7 @@
                                 </div>
                             </div>
                         
-                        </form>
+                        
                     </div><!-- .End .tab-pane -->
                 </div><!-- End .tab-content -->
             </div><!-- End .container -->
@@ -298,5 +306,25 @@ form {
     color: white;
     margin-bottom: 10px;
     width: 100%;
+}
+.pc-mobile {
+  display: none;
+}
+.pc-button {
+  display: block;
+}
+/* Media query */
+@media screen and (max-width: 768px) {
+  .pc-mobile {
+  display: block;
+}
+.pc-button {
+  display: none;
+}
+}
+@media screen and (max-width: 991px) {
+  form {
+    padding: 60px 30px;
+}
 }
 </style>

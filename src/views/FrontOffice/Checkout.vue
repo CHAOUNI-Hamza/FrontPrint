@@ -20,8 +20,10 @@
 	                <div class="container">
             			<div class="checkout-discount">
             				<form action="#">
-        						<input type="text" class="form-control" required id="checkout-discount-input">
-            					<label for="checkout-discount-input" class="text-truncate">Avez-vous un coupon ? <span>Cliquez ici pour entrer votre code</span></label>
+        						<input type="text" class="form-control" required id="checkout-discount-input" placeholder="Entrez le Code Promo">
+            					<label for="checkout-discount-input" class="text-truncate">
+									<button class="btn btn-coupon">APPLIQUER</button>
+								</label>
             				</form>
             			</div><!-- End .checkout-discount -->
             			<form action="#">
@@ -40,94 +42,57 @@
 		                					</div><!-- End .col-sm-6 -->
 		                				</div><!-- End .row -->
 
-	            						<label>Nom de l'entreprise (facultatif)</label>
+	            						<label>Nom de l'entreprise (​OPTIONNEL)</label>
 	            						<input type="text" class="form-control">
 
 	            						<label>Pays</label>
 	            						<input type="text" class="form-control" required>
 
-	            						<label>Adresse postale</label>
-	            						<input type="text" class="form-control" placeholder="House number and Street name" required>
-	            						<input type="text" class="form-control" placeholder="Appartments, suite, unit etc ..." required>
+	            						<label>Adresse</label>
+	            						<input type="text" class="form-control" required>
 
 	            						<div class="row">
 		                					<div class="col-sm-6">
 		                						<label>Ville</label>
 		                						<input type="text" class="form-control" required>
 		                					</div><!-- End .col-sm-6 -->
-
-		                					<div class="col-sm-6">
-		                						<label>État / Comté *</label>
-		                						<input type="text" class="form-control" required>
-		                					</div><!-- End .col-sm-6 -->
-		                				</div><!-- End .row -->
-
-		                				<div class="row">
-		                					<div class="col-sm-6">
-		                						<label>Code postal / ZIP</label>
-		                						<input type="text" class="form-control" required>
-		                					</div><!-- End .col-sm-6 -->
-
-		                					<div class="col-sm-6">
+											<div class="col-sm-6">
 		                						<label>Téléphone</label>
 		                						<input type="tel" class="form-control" required>
 		                					</div><!-- End .col-sm-6 -->
 		                				</div><!-- End .row -->
-
 	                					<label>Adresse e-mail</label>
 	        							<input type="email" class="form-control" required>
 
-	        							<div class="custom-control custom-checkbox">
-											<input type="checkbox" class="custom-control-input" id="checkout-create-acc">
-											<label class="custom-control-label" for="checkout-create-acc">Créer un compte ?</label>
-										</div><!-- End .custom-checkbox -->
-
-										<div class="custom-control custom-checkbox">
-											<input type="checkbox" class="custom-control-input" id="checkout-diff-address">
-											<label class="custom-control-label" for="checkout-diff-address">Expédier vers une adresse différente ?</label>
-										</div><!-- End .custom-checkbox -->
-
-	                					<label>Notes de commande (facultatif)</label>
-	        							<textarea class="form-control" cols="30" rows="4" placeholder="Notes about your order, e.g. special notes for delivery"></textarea>
 		                		</div><!-- End .col-lg-9 -->
 		                		<aside class="col-lg-3">
 		                			<div class="summary">
 		                				<h3 class="summary-title">Votre commande</h3><!-- End .summary-title -->
 
 		                				<table class="table table-summary">
-		                					<thead>
-		                						<tr>
-		                							<th>Produit</th>
-		                							<th>Total</th>
-		                						</tr>
-		                					</thead>
+	                					<tbody>
+	                						<tr class="summary-subtotal">
+	                							<td>Total H.T</td>
+	                							<td style="min-width: 100px;">160.00 DH</td>
+	                						</tr><!-- End .summary-subtotal -->
+											<tr class="summary-subtotal">
+	                							<td>Frais de livraison H.T</td>
+	                							<td style="min-width: 100px;">160.00 DH</td>
+	                						</tr>
+											<tr class="summary-subtotal">
+	                							<td>TVA</td>
+	                							<td style="min-width: 100px;">160.00 DH</td>
+	                						</tr>
+											<tr class="summary-subtotal mb-5">
+	                							<td style="font-size: 19px;
+    font-weight: bold;">Total TTC</td>
+	                							<td style="min-width: 100px;font-size: 19px;
+    font-weight: bold;">533,52 DH</td>
+	                						</tr>
+	                					</tbody>
+	                				</table><!-- End .table table-summary -->
 
-		                					<tbody>
-		                						<tr>
-		                							<td><a href="#">Chaussures de running élastiques tricotées de couleur beige</a></td>
-		                							<td>$84.00</td>
-		                						</tr>
-
-		                						<tr>
-		                							<td><a href="#">Chaussures de running élastiques tricotées de couleur beige</a></td>
-		                							<td>$76,00</td>
-		                						</tr>
-		                						<tr class="summary-subtotal">
-		                							<td>Sous-total:</td>
-		                							<td>$160.00</td>
-		                						</tr><!-- End .summary-subtotal -->
-		                						<tr>
-		                							<td>Livraison:</td>
-		                							<td>Free shipping</td>
-		                						</tr>
-		                						<tr class="summary-total">
-		                							<td>Total:</td>
-		                							<td>$160.00</td>
-		                						</tr><!-- End .summary-total -->
-		                					</tbody>
-		                				</table><!-- End .table table-summary -->
-
-		                				<div class="accordion-summary" id="accordion-payment">
+		                				<div class="accordion-summary mt-3" id="accordion-payment">
 										    <div class="card">
 										        <div class="card-header" id="heading-1">
 										            <h2 class="card-title">
@@ -217,6 +182,16 @@
         </main><!-- End .main -->
 </template>
 <style scoped>
+.table.table-summary tbody td {
+    height: 40px;
+}
+.checkout-discount label {
+	left: 135px;
+}
+.btn-coupon {
+    background: #3399ff;
+    color: white;
+}
 .breadcrumb {
     background: none !important;
     border-radius: 0;
@@ -368,6 +343,14 @@ tr {
     visibility: hidden;
     transition: opacity .01s;
 }
-
-
+/* Media query */
+@media screen and (max-width: 768px) {}
+@media screen and (max-width: 991px) {
+	.page-content {
+    padding: 2rem;
+}
+.accordion-summary .card-title a img {
+    width: 50%;
+}
+}
 </style>

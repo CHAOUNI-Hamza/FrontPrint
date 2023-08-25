@@ -42,8 +42,8 @@
           </div>
         </form>
         <form action="">
-          <div class="row">
-            <div class="col-md-3 col-sm-6"></div>
+          <div class="row tablette-row">
+            <div class="col-md-3 col-sm-6 tablette-col"></div>
             <div class="col-md-3 col-sm-6">
               <button class="btn btn-table">Développer tout</button>
             </div>
@@ -114,7 +114,7 @@
     </div>
   </template>
   
-  <style>
+  <style scoped>
   .orders {
     margin-top: 40px;
   }
@@ -178,7 +178,18 @@
       max-width: 25%;
     }
   }
-  </style>
+  /* Media query */
+@media screen and (max-width: 768px) {
+}
+@media screen and (max-width: 992px) {
+  .tablette-col {
+    display: none;
+  }
+  .tablette-row {
+    justify-content: space-around;
+  }
+}
+</style>
 
 
 

@@ -13,19 +13,23 @@
                             <li>
                                 <a href="#">Links</a>
                                 <ul>
-                                    <li>
+                                    <li v-if="authenticated">
                                         <div class="header-dropdown">
                                             <a href="#">Hamza CHAOUNI</a>
                                             <div class="header-menu">
                                                 <ul>
                                                     <li><router-link :to="{ name: 'parametres' }">Profile</router-link></li>
                                                     <li><a href="#">Historique</a></li>
-                                                    <li><a href="#">Se deconneter</a></li>
+                                                    <li><a @click="signOut" style="cursor: pointer;">Se deconneter</a></li>
                                                 </ul>
                                             </div><!-- End .header-menu -->
                                         </div>
                                     </li>
-                                    <li><a href="#signin-modal" data-toggle="modal">Inscription / Connexion</a></li>
+                                    <li v-else>
+                                        <div style="padding-top: 0.75rem;padding-bottom: 0.75rem;">
+                                            <a href="#signin-modal" data-toggle="modal">Inscription / Connexion</a>
+                                        </div>
+                                        </li>
                                 </ul>
                             </li>
                         </ul><!-- End .top-menu -->
@@ -203,9 +207,6 @@
                                 <li>
                                     <a href="product.html" class="sf-with-ul">Communication</a>
                                     <ul style="text-align: left;">
-                                        <li>
-                                            <a class="menu-title">Communication</a>
-                                        </li>
                                         <li><a href="login.html">Flyer</a></li>
                                         <li><a href="login.html">Affiche</a></li>
                                         <li>
@@ -238,9 +239,6 @@
                                 <li>
                                     <a href="product.html" class="sf-with-ul">Restauration</a>
                                     <ul style="text-align: left;">
-                                        <li>
-                                            <a class="menu-title">Restauration</a>
-                                        </li>
                                         <li><a href="login.html">Chevalets</a></li>
                                         <li><a href="login.html">Port-additions</a></li>
                                         <li>
@@ -268,9 +266,6 @@
                                 <li>
                                     <a href="product.html" class="sf-with-ul">Packaging</a>
                                     <ul style="text-align: left;">
-                                        <li>
-                                            <a class="menu-title">Packaging</a>
-                                        </li>
                                         <li><a href="login.html">Sacs papiers de luxe</a></li>
                                         <li>
                                             <a href="about.html" class="sf-with-ul">Etuis pliants</a>
@@ -330,148 +325,135 @@
                 <nav class="mobile-nav">
                     <ul class="mobile-menu">
                         <li class="active">
-                            <a href="index.html">Caterie</a>
+                            <a href="index.html">Carterie</a>
 
                             <ul>
-                                <li><a href="index-1.html">01 - furniture store</a></li>
-                                <li><a href="index-2.html">02 - furniture store</a></li>
-                                <li><a href="index-3.html">03 - electronic store</a></li>
-                                <li><a href="index-4.html">04 - electronic store</a></li>
-                                <li><a href="index-5.html">05 - fashion store</a></li>
-                                <li><a href="index-6.html">06 - fashion store</a></li>
-                                <li><a href="index-7.html">07 - fashion store</a></li>
-                                <li><a href="index-8.html">08 - fashion store</a></li>
-                                <li><a href="index-9.html">09 - fashion store</a></li>
-                                <li><a href="index-10.html">10 - shoes store</a></li>
-                                <li><a href="index-11.html">11 - furniture simple store</a></li>
-                                <li><a href="index-12.html">12 - fashion simple store</a></li>
-                                <li><a href="index-13.html">13 - market</a></li>
-                                <li><a href="index-14.html">14 - market fullwidth</a></li>
-                                <li><a href="index-15.html">15 - lookbook 1</a></li>
-                                <li><a href="index-16.html">16 - lookbook 2</a></li>
-                                <li><a href="index-17.html">17 - fashion store</a></li>
-                                <li><a href="index-18.html">18 - fashion store (with sidebar)</a></li>
-                                <li><a href="index-19.html">19 - games store</a></li>
-                                <li><a href="index-20.html">20 - book store</a></li>
-                                <li><a href="index-21.html">21 - sport store</a></li>
-                                <li><a href="index-22.html">22 - tools store</a></li>
-                                <li><a href="index-23.html">23 - fashion left navigation store</a></li>
-                                <li><a href="index-24.html">24 - extreme sport store</a></li>
+                                <li>
+                                            <a href="about.html" class="sf-with-ul">Cartes de visite</a>
+
+                                            <ul>
+                                                <li><a href="about.html">Classique</a></li>
+                                                <li><a href="about.html">Luxe</a></li>
+                                                <li><a href="about-2.html">Ultra Blanches</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="login.html">Cartes de correspondance</a></li>
+                                        <li><a href="faq.html">Cartes de voeux</a></li>
+                                        <li><a href="404.html">Cartes d'invitation</a></li>
+                                        <li><a href="coming-soon.html">Cartes postales</a></li>
+                                        <li><a href="coming-soon.html">Cartes marque-pages</a></li>
                             </ul>
                         </li>
                         <li>
                             <a href="category.html">Papeterie</a>
                             <ul>
-                                <li><a href="category-list.html">Shop List</a></li>
-                                <li><a href="category-2cols.html">Shop Grid 2 Columns</a></li>
-                                <li><a href="category.html">Shop Grid 3 Columns</a></li>
-                                <li><a href="category-4cols.html">Shop Grid 4 Columns</a></li>
-                                <li><a href="category-boxed.html"><span>Shop Boxed No Sidebar<span class="tip tip-hot">Hot</span></span></a></li>
-                                <li><a href="category-fullwidth.html">Shop Fullwidth No Sidebar</a></li>
-                                <li><a href="product-category-boxed.html">Product Category Boxed</a></li>
-                                <li><a href="product-category-fullwidth.html"><span>Product Category Fullwidth<span class="tip tip-new">New</span></span></a></li>
-                                <li><a href="cart.html">Cart</a></li>
-                                <li><a href="checkout.html">Checkout</a></li>
-                                <li><a href="wishlist.html">Wishlist</a></li>
-                                <li><a href="#">Lookbook</a></li>
+                                <li><a href="login.html">Papier en-tête</a></li>
+                                        <li><a href="login.html">Ordonnances</a></li>
+                                        <li>
+                                            <a href="about.html" class="sf-with-ul">Chemise a Rabat</a>
+
+                                            <ul>
+                                                <li><a href="about.html">Double Rabat</a></li>
+                                                <li><a href="about.html">Rabat simple</a></li>
+                                                <li><a href="about-2.html">Ultra Blanches</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="about.html" class="sf-with-ul">Enveloppes</a>
+
+                                            <ul>
+                                                <li><a href="about.html">Standard</a></li>
+                                                <li><a href="about.html">Luxe</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="login.html">Blocs-notes</a></li>
                             </ul>
                         </li>
                         <li>
                             <a href="product.html" class="sf-with-ul">Communication</a>
                             <ul>
-                                <li><a href="product.html">Default</a></li>
-                                <li><a href="product-centered.html">Centered</a></li>
-                                <li><a href="product-extended.html"><span>Extended Info<span class="tip tip-new">New</span></span></a></li>
-                                <li><a href="product-gallery.html">Gallery</a></li>
-                                <li><a href="product-sticky.html">Sticky Info</a></li>
-                                <li><a href="product-sidebar.html">Boxed With Sidebar</a></li>
-                                <li><a href="product-fullwidth.html">Full Width</a></li>
-                                <li><a href="product-masonry.html">Masonry Sticky Info</a></li>
+                                <li><a href="login.html">Flyer</a></li>
+                                        <li><a href="login.html">Affiche</a></li>
+                                        <li>
+                                            <a href="about.html" class="sf-with-ul">Dépliants</a>
+
+                                            <ul>
+                                                <li><a href="about.html">Pli simple</a></li>
+                                                <li><a href="about.html">Pli roulés</a></li>
+                                                <li><a href="about-2.html">Pli croirés</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="about.html" class="sf-with-ul">Brochures</a>
+
+                                            <ul>
+                                                <li><a href="about.html">piquées</a></li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <a href="about.html" class="sf-with-ul">Etiquettes</a>
+
+                                            <ul>
+                                                <li><a href="about.html">Tags</a></li>
+                                                <li><a href="about.html">Stickers</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="login.html">Tickets</a></li>
                             </ul>
                         </li>
                         <li>
                             <a href="#">Hotellerie / Restauration</a>
                             <ul>
-                                <li>
-                                    <a href="about.html">About</a>
+                                <li><a href="login.html">Chevalets</a></li>
+                                        <li><a href="login.html">Port-additions</a></li>
+                                        <li>
+                                            <a href="about.html" class="sf-with-ul">Menus</a>
 
-                                    <ul>
-                                        <li><a href="about.html">About 01</a></li>
-                                        <li><a href="about-2.html">About 02</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="contact.html">Contact</a>
-
-                                    <ul>
-                                        <li><a href="contact.html">Contact 01</a></li>
-                                        <li><a href="contact-2.html">Contact 02</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="login.html">Login</a></li>
-                                <li><a href="faq.html">FAQs</a></li>
-                                <li><a href="404.html">Error 404</a></li>
-                                <li><a href="coming-soon.html">Coming Soon</a></li>
+                                            <ul>
+                                                <li><a href="about.html">Page à page</a></li>
+                                                <li><a href="about.html">piqués</a></li>
+                                                <li>
+                                                    <a href="about-2.html">Dépliants</a>
+                                                    <ul>
+                                                <li><a href="about.html">1 Pli</a></li>
+                                                <li><a href="about.html">2 Plis</a></li>
+                                            </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="login.html">Sets de table</a></li>
+                                        <li><a href="login.html">Ronds de serviette</a></li>
+                                        <li><a href="login.html">Porte-cartes Magnétiques</a></li>
+                                        <li><a href="login.html">Cravates accroche portes</a></li>
+                                        <li><a href="login.html">Sous-verres</a></li>
                             </ul>
                         </li>
                         <li>
                             <a href="blog.html">Packaging</a>
 
                             <ul>
-                                <li><a href="blog.html">Classic</a></li>
-                                <li><a href="blog-listing.html">Listing</a></li>
-                                <li>
-                                    <a href="#">Grid</a>
-                                    <ul>
-                                        <li><a href="blog-grid-2cols.html">Grid 2 columns</a></li>
-                                        <li><a href="blog-grid-3cols.html">Grid 3 columns</a></li>
-                                        <li><a href="blog-grid-4cols.html">Grid 4 columns</a></li>
-                                        <li><a href="blog-grid-sidebar.html">Grid sidebar</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="#">Masonry</a>
-                                    <ul>
-                                        <li><a href="blog-masonry-2cols.html">Masonry 2 columns</a></li>
-                                        <li><a href="blog-masonry-3cols.html">Masonry 3 columns</a></li>
-                                        <li><a href="blog-masonry-4cols.html">Masonry 4 columns</a></li>
-                                        <li><a href="blog-masonry-sidebar.html">Masonry sidebar</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="#">Mask</a>
-                                    <ul>
-                                        <li><a href="blog-mask-grid.html">Blog mask grid</a></li>
-                                        <li><a href="blog-mask-masonry.html">Blog mask masonry</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="#">Single Post</a>
-                                    <ul>
-                                        <li><a href="single.html">Default with sidebar</a></li>
-                                        <li><a href="single-fullwidth.html">Fullwidth no sidebar</a></li>
-                                        <li><a href="single-fullwidth-sidebar.html">Fullwidth with sidebar</a></li>
-                                    </ul>
-                                </li>
+                                <li><a href="login.html">Sacs papiers de luxe</a></li>
+                                        <li>
+                                            <a href="about.html" class="sf-with-ul">Etuis pliants</a>
+
+                                            <ul>
+                                                <li><a href="about.html">Etuis</a></li>
+                                                <li><a href="about.html">Boites</a></li>
+                                                <li><a href="about.html">Berlingots</a></li>
+                                            </ul>
+                                        </li>
                             </ul>
                         </li>
                         <li>
                             <a href="elements-list.html">Signalétique</a>
                             <ul>
-                                <li><a href="elements-products.html">Products</a></li>
-                                <li><a href="elements-typography.html">Typography</a></li>
-                                <li><a href="elements-titles.html">Titles</a></li>
-                                <li><a href="elements-banners.html">Banners</a></li>
-                                <li><a href="elements-product-category.html">Product Category</a></li>
-                                <li><a href="elements-video-banners.html">Video Banners</a></li>
-                                <li><a href="elements-buttons.html">Buttons</a></li>
-                                <li><a href="elements-accordions.html">Accordions</a></li>
-                                <li><a href="elements-tabs.html">Tabs</a></li>
-                                <li><a href="elements-testimonials.html">Testimonials</a></li>
-                                <li><a href="elements-blog-posts.html">Blog Posts</a></li>
-                                <li><a href="elements-portfolio.html">Portfolio</a></li>
-                                <li><a href="elements-cta.html">Call to Action</a></li>
-                                <li><a href="elements-icon-boxes.html">Icon Boxes</a></li>
+                                <li><a class="menu-title">Signalétique</a></li>
+                                        <li><a href="login.html">Photocalls</a></li>
+                                        <li><a href="login.html">Roll-up</a></li>
+                                        <li><a href="login.html">X-banners</a></li>
+                                        <li><a href="login.html">Stop-Trottoirs</a></li>
+                                        <li><a href="login.html">Totems Rigides</a></li>
+                                        <li><a href="login.html">Beach Flags</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -480,17 +462,12 @@
             <div class="tab-pane fade" id="mobile-cats-tab" role="tabpanel" aria-labelledby="mobile-cats-link">
                 <nav class="mobile-cats-nav">
                     <ul class="mobile-cats-menu">
-                        <li><a class="mobile-cats-lead" href="#">Daily offers</a></li>
-                        <li><a class="mobile-cats-lead" href="#">Gift Ideas</a></li>
-                        <li><a href="#">Beds</a></li>
-                        <li><a href="#">Lighting</a></li>
-                        <li><a href="#">Sofas & Sleeper sofas</a></li>
-                        <li><a href="#">Storage</a></li>
-                        <li><a href="#">Armchairs & Chaises</a></li>
-                        <li><a href="#">Decoration </a></li>
-                        <li><a href="#">Kitchen Cabinets</a></li>
-                        <li><a href="#">Coffee & Tables</a></li>
-                        <li><a href="#">Outdoor Furniture </a></li>
+                        <li><a href="#">CARTERIE</a></li>
+                        <li><a href="#">PAPETERIE</a></li>
+                        <li><a href="#">COMMUNICATION</a></li>
+                        <li><a href="#">RESTAURATION</a></li>
+                        <li><a href="#">PACKAGING</a></li>
+                        <li><a href="#">SIGNALÉTIQUE </a></li>
                     </ul><!-- End .mobile-cats-menu -->
                 </nav><!-- End .mobile-cats-nav -->
             </div><!-- .End .tab-pane -->
@@ -524,94 +501,118 @@
                                 <li class="nav-item">
                                     <a class="nav-link" id="register-tab" data-toggle="tab" href="#register" role="tab" aria-controls="register" aria-selected="false">Inscription</a>
                                 </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="oublie-tab" data-toggle="tab" href="#oublie" role="tab" aria-controls="oublie" aria-selected="false">MP oublié</a>
+                                </li>
                             </ul>
                             <div class="tab-content" id="tab-content-5">
                                 <div class="tab-pane fade show active" id="signin" role="tabpanel" aria-labelledby="signin-tab">
-                                    <form action="#">
-                                        <div class="form-group">
-                                            <label for="singin-email">Nom d'utilisateur ou adresse e-mail</label>
-                                            <input type="text" class="form-control" id="singin-email" name="singin-email" required>
-                                        </div><!-- End .form-group -->
+                                    <form @submit.prevent="submit()">
 
                                         <div class="form-group">
-                                            <label for="singin-password">Mot de passe</label>
-                                            <input type="password" class="form-control" id="singin-password" name="singin-password" required>
-                                        </div><!-- End .form-group -->
+                                            <label for="singin-email">Adresse e-mail</label>
+                                            <input v-model="signIn.email" @blur="v$.signIn.email.$touch" :class="{ error: v$.signIn.email.$errors.length }" type="text" class="form-control" id="singin-email"
+                                            name="email">
+                                            <div class="input-errors" v-for="error of v$.signIn.email.$errors" :key="error.$uid">
+    <span class="error-msg">{{ error.$message }}</span>
+  </div>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label for="password">Mot de passe</label>
+                                            <input v-model="signIn.password" @blur="v$.signIn.password.$touch" :class="{ error: v$.signIn.password.$errors.length }" type="password" class="form-control" id="singin-email"
+                                            name="password">
+                                            <div class="input-errors" v-for="error of v$.signIn.password.$errors" :key="error.$uid">
+    <span class="error-msg">{{ error.$message }}</span>
+  </div>
+                                        </div>
+                                        <div class="input-errors" style="text-align: left;" v-if="getErrorAuth">
+    <span class="error-msg">{{ getErrorAuth }}</span>
+  </div>
 
                                         <div class="form-footer">
                                             <button type="submit" class="btn btn-outline-primary-2">
                                                 <span>Connexion</span>
                                                 <i class="icon-long-arrow-right"></i>
                                             </button>
-
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="signin-remember">
-                                                <label class="custom-control-label" for="signin-remember">Se souvenir de moi</label>
-                                            </div><!-- End .custom-checkbox -->
-
-                                            <a href="#" class="forgot-link">Mot de passe oublié?</a>
                                         </div><!-- End .form-footer -->
                                     </form>
-                                    <div class="form-choice">
-                                        <p class="text-center">ou connectez-vous avec</p>
-                                        <div class="row">
-                                            <div class="col-sm-6">
-                                                <a href="#" class="btn btn-login btn-g">
-                                                    <i class="icon-google"></i>
-                                                    avec Google
-                                                </a>
-                                            </div><!-- End .col-6 -->
-                                            <div class="col-sm-6">
-                                                <a href="#" class="btn btn-login btn-f">
-                                                    <i class="icon-facebook-f"></i>
-                                                    avec Facebook
-                                                </a>
-                                            </div><!-- End .col-6 -->
-                                        </div><!-- End .row -->
-                                    </div><!-- End .form-choice -->
                                 </div><!-- .End .tab-pane -->
                                 <div class="tab-pane fade" id="register" role="tabpanel" aria-labelledby="register-tab">
-                                    <form action="#">
+                                    <form @submit.prevent="send()">
                                         <div class="form-group">
                                             <label for="register-email">Votre adresse e-mail</label>
-                                            <input type="email" class="form-control" id="register-email" name="register-email" required>
+                                            <input v-model="signUp.email" @blur="v$.signUp.email.$touch" :class="{ error: v$.signUp.email.$errors.length || getEmailExists }" type="email" class="form-control" id="register-email" name="register-email" >
+                                            <div class="input-errors" v-for="error of v$.signUp.email.$errors" :key="error.$uid">
+                                                <span class="error-msg">{{ error.$message }}</span>
+                                            </div>
+                                            <div class="input-errors" v-if="getEmailExists">
+                                                <span class="error-msg">{{ getEmailExists }}</span>
+                                            </div>
                                         </div><!-- End .form-group -->
                                         <div class="form-group">
                                             <label for="register-email">Prénom</label>
-                                            <input type="text" class="form-control" id="register-email" name="register-email" required>
+                                            <input v-model="signUp.first_name" @blur="v$.signUp.first_name.$touch" :class="{ error: v$.signUp.first_name.$errors.length }" type="text" class="form-control" id="register-email" name="register-email" >
+                                            <div class="input-errors" v-for="error of v$.signUp.first_name.$errors" :key="error.$uid">
+                                                <span class="error-msg">{{ error.$message }}</span>
+                                            </div>
                                         </div><!-- End .form-group -->
                                         <div class="form-group">
                                             <label for="register-email">Nom</label>
-                                            <input type="text" class="form-control" id="register-email" name="register-email" required>
+                                            <input v-model="signUp.last_name" @blur="v$.signUp.last_name.$touch" :class="{ error: v$.signUp.last_name.$errors.length }" type="text" class="form-control" id="register-email" name="register-email" >
+                                            <div class="input-errors" v-for="error of v$.signUp.last_name.$errors" :key="error.$uid">
+                                                <span class="error-msg">{{ error.$message }}</span>
+                                            </div>
                                         </div><!-- End .form-group -->
                                         <div class="form-group">
                                             <label for="register-email">Téléphone</label>
-                                            <input type="text" class="form-control" id="register-email" name="register-email" required>
+                                            <input v-model="signUp.phone_number" @blur="v$.signUp.phone_number.$touch" :class="{ error: v$.signUp.phone_number.$errors.length }" type="text" class="form-control" id="register-email" name="register-email" >
+                                            <div class="input-errors" v-for="error of v$.signUp.phone_number.$errors" :key="error.$uid">
+                                                <span class="error-msg">{{ error.$message }}</span>
+                                            </div>
                                         </div><!-- End .form-group -->
                                         <div class="form-group">
                                             <label for="register-email">Adresse</label>
-                                            <input type="text" class="form-control" id="register-email" name="register-email" required>
+                                            <input v-model="signUp.address" @blur="v$.signUp.address.$touch" :class="{ error: v$.signUp.address.$errors.length }" type="text" class="form-control" id="register-email" name="register-email" >
+                                            <div class="input-errors" v-for="error of v$.signUp.address.$errors" :key="error.$uid">
+                                                <span class="error-msg">{{ error.$message }}</span>
+                                            </div>
                                         </div><!-- End .form-group -->
                                         <div class="form-group">
                                             <label for="register-email">Region</label>
-                                            <input type="text" class="form-control" id="register-email" name="register-email" required>
+                                            <input v-model="signUp.region" @blur="v$.signUp.region.$touch" :class="{ error: v$.signUp.region.$errors.length }" type="text" class="form-control" id="register-email" name="register-email" >
+                                            <div class="input-errors" v-for="error of v$.signUp.region.$errors" :key="error.$uid">
+                                                <span class="error-msg">{{ error.$message }}</span>
+                                            </div>
                                         </div><!-- End .form-group -->
                                         <div class="form-group">
                                             <label for="register-email">Ville</label>
-                                            <input type="text" class="form-control" id="register-email" name="register-email" required>
+                                            <input v-model="signUp.city" @blur="v$.signUp.city.$touch" :class="{ error: v$.signUp.city.$errors.length }" type="text" class="form-control" id="register-email" name="register-email" >
+                                            <div class="input-errors" v-for="error of v$.signUp.city.$errors" :key="error.$uid">
+                                                <span class="error-msg">{{ error.$message }}</span>
+                                            </div>
                                         </div><!-- End .form-group -->
                                         <div class="form-group">
                                             <label for="register-email">Pays</label>
-                                            <input type="text" class="form-control" id="register-email" name="register-email" required>
+                                            <input v-model="signUp.country" @blur="v$.signUp.country.$touch" :class="{ error: v$.signUp.country.$errors.length }" type="text" class="form-control" id="register-email" name="register-email" >
+                                            <div class="input-errors" v-for="error of v$.signUp.country.$errors" :key="error.$uid">
+                                                <span class="error-msg">{{ error.$message }}</span>
+                                            </div>
                                         </div><!-- End .form-group -->
 
                                         <div class="form-group">
                                             <label for="register-password">Mot de passe</label>
-                                            <input type="password" class="form-control" id="register-password" name="register-password" required>
+                                            <input v-model="signUp.password" @blur="v$.signUp.password.$touch" :class="{ error: v$.signUp.password.$errors.length }" type="password" class="form-control" id="register-password" name="register-password" >
+                                            <div class="input-errors" v-for="error of v$.signUp.password.$errors" :key="error.$uid">
+                                                <span class="error-msg">{{ error.$message }}</span>
+                                            </div>
                                         </div><!-- End .form-group -->
                                         <div class="form-group">
                                             <label for="register-password">Confirmer le mot de passe</label>
-                                            <input type="password" class="form-control" id="register-password" name="register-password" required>
+                                            <input v-model="signUp.confirmPassword" @blur="v$.signUp.confirmPassword.$touch" :class="{ error: v$.signUp.confirmPassword.$errors.length }" type="password" class="form-control" id="register-password" name="register-password" >
+                                            <div class="input-errors" v-for="error of v$.signUp.confirmPassword.$errors" :key="error.$uid">
+                                                <span class="error-msg">{{ error.$message }}</span>
+                                            </div>
                                         </div><!-- End .form-group -->
 
                                         <div class="form-footer">
@@ -619,31 +620,33 @@
                                                 <span>S'INSCRIRE</span>
                                                 <i class="icon-long-arrow-right"></i>
                                             </button>
-
-                                            <div class="custom-control custom-checkbox">
-                                                <input type="checkbox" class="custom-control-input" id="register-policy" required>
-                                                <label class="custom-control-label" for="register-policy">D'accord <a href="#">Politique de confidentialité</a></label>
-                                            </div><!-- End .custom-checkbox -->
                                         </div><!-- End .form-footer -->
                                     </form>
-                                    <div class="form-choice">
-                                        <p class="text-center">ou connectez-vous avec</p>
-                                        <div class="row">
-                                            <div class="col-sm-6">
-                                                <a href="#" class="btn btn-login btn-g">
-                                                    <i class="icon-google"></i>
-                                                    avec Google
-                                                </a>
-                                            </div><!-- End .col-6 -->
-                                            <div class="col-sm-6">
-                                                <a href="#" class="btn btn-login btn-f">
-                                                    <i class="icon-facebook-f"></i>
-                                                    avec Facebook
-                                                </a>
-                                            </div><!-- End .col-6 -->
-                                        </div><!-- End .row -->
-                                    </div><!-- End .form-choice -->
                                 </div><!-- .End .tab-pane -->
+                                <div class="tab-pane fade show" id="oublie" role="tabpanel" aria-labelledby="signin-tab">
+                                    <form @submit.prevent="submitForgot()">
+
+                                        <div class="form-group">
+                                            <label for="singin-email">Adresse e-mail</label>
+                                            <input v-model="forgotPassword.email" @blur="v$.forgotPassword.email.$touch" :class="{ error: v$.forgotPassword.email.$errors.length || getEmailNotExists }" type="text" class="form-control" id="singin-email"
+                                            name="email">
+                                            <div class="input-errors" v-for="error of v$.forgotPassword.email.$errors" :key="error.$uid">
+    <span class="error-msg">{{ error.$message }}</span>
+  </div>
+  <div class="input-errors" v-if="getEmailNotExists">
+    <span class="error-msg">{{ getEmailNotExists }}</span>
+  </div>
+                                        </div>
+                                    
+
+                                        <div class="form-footer">
+                                            <button type="submit" class="btn btn-outline-primary-2">
+                                                <span>ENVOYER</span>
+                                                <i class="icon-long-arrow-right"></i>
+                                            </button>
+                                        </div><!-- End .form-footer -->
+                                    </form>
+                                </div>
                             </div><!-- End .tab-content -->
                         </div><!-- End .form-tab -->
                     </div><!-- End .form-box -->
@@ -654,8 +657,163 @@
 
 
   </template>
+  <script>
+//import { reactive } from 'vue' // "from '@vue/composition-api'" if you are using Vue <2.7
+import { useVuelidate } from '@vuelidate/core'
+import { required, email, minLength, maxLength, sameAs } from '@vuelidate/validators'
+import { mapActions, mapGetters } from "vuex";
+export default {
+  data() {
+    return {
+        v$: useVuelidate(),
+        signIn: {
+        email: '',
+        password: ''
+      },
+      signUp: {
+        first_name: '',
+        last_name: '',
+        phone_number: '',
+        address: '',
+        region: '',
+        city: '',
+        country: '',
+        email: '',
+        password: '',
+        confirmPassword: ''
+      },
+      forgotPassword : {
+        email: ''
+      },
+        errorMessage: null,
+    }
+  },
+  validations() {
+    return {
+        signIn: {
+            password: {
+                required,
+                minLength: minLength(5),
+                maxLength: maxLength(30),
+                $autoDirty: true,
+            },
+            email: { 
+                required,
+                email,
+                minLength: minLength(10),
+                maxLength: maxLength(40),
+                $autoDirty: true,
+            }
+        },
+      signUp: {
+        first_name: {
+                required,
+                minLength: minLength(5),
+                maxLength: maxLength(30),
+                $autoDirty: true,
+            },
+        last_name: {
+                required,
+                minLength: minLength(5),
+                maxLength: maxLength(30),
+                $autoDirty: true,
+            },
+        phone_number: {
+                required,
+                minLength: minLength(5),
+                maxLength: maxLength(30),
+                $autoDirty: true,
+            },
+        address: {
+                required,
+                minLength: minLength(5),
+                maxLength: maxLength(30),
+                $autoDirty: true,
+            },
+        region: {
+                required,
+                minLength: minLength(2),
+                maxLength: maxLength(30),
+                $autoDirty: true,
+            },
+        city: {
+                required,
+                minLength: minLength(2),
+                maxLength: maxLength(30),
+                $autoDirty: true,
+            },
+        country: {
+                required,
+                minLength: minLength(2),
+                maxLength: maxLength(30),
+                $autoDirty: true,
+            },
+        email: {
+                required,
+                email,
+                $autoDirty: true,
+            },
+        password: {
+                required,
+                minLength: minLength(5),
+                maxLength: maxLength(30),
+                $autoDirty: true,
+            },
+            confirmPassword: {
+                required,
+                sameAsPassword: sameAs(this.signUp.password),
+            }
+      },
+      forgotPassword : {
+        email: { required, email, $autoDirty: true }
+      }
+    };
+},
+    methods: {
+        ...mapActions({
+            login: "Auth/signIn",
+            register: "Auth/signUp",
+            forgout: "Auth/forgoutPassword",
+            signOut: "Auth/signOut",
+        }),
+        submit() {
+            this.login(this.signIn);
+        },
+        send() {
+            this.register(this.signUp);
+        },
+        submitForgot() {
+            this.forgout(this.forgotPassword)
+        }
+    },
+    computed: {
+        ...mapGetters({
+            getEmailExists: "Auth/getEmailExists",
+            getErrorAuth: "Auth/getErrorAuth",
+            getEmailNotExists: "Auth/getEmailNotExists",
+            authenticated: "Auth/authenticated",
+        }),
+    },
+}
+</script>
   
   <style scoped>
+  .nav-link {
+    font-size: 1.7rem !important;
+}
+.input-errors {
+    margin-bottom: 10px;
+}
+  .error {
+    border: 1px solid #ff0018 !important;
+  }
+  .input-errors .error-msg {
+    background: red;
+    padding: 4px 11px;
+    color: white;
+    font-weight: 900;
+    border-radius: 9px;
+  }
 .header-intro-clearance .header-bottom .container::after {
     height: 0;
 }
@@ -682,7 +840,7 @@
     background-color: #fafafa;
     border: 1px solid #ebebeb;
     border-radius: 0;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     transition: all 0.3s;
     box-shadow: none;
 }
@@ -747,6 +905,23 @@
 }
 .header-intro-clearance .wishlist .wishlist-count {
     right: 2.5rem !important;
+}
+/* Media query */
+@media screen and (max-width: 768px) {
+    .mobile-cats-menu {
+        text-align: left;
+    }
+    .mobile-menu {
+        text-align: left;
+    }
+}
+@media screen and (max-width: 992px) {
+    .mobile-cats-menu {
+        text-align: left;
+    }
+    .mobile-menu {
+        text-align: left;
+    }
 }
   </style>
   

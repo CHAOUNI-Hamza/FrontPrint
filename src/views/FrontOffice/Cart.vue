@@ -24,9 +24,8 @@
 									<thead>
 										<tr>
 											<th>Produit</th>
-											<th>Prix</th>
-											<th>Quantité</th>
-											<th>Total</th>
+											<th style="text-align: center;">Prix</th>
+											<th style="text-align: center;">Prix TTC</th>
 											<th></th>
 										</tr>
 									</thead>
@@ -46,13 +45,8 @@
 													</h3><!-- End .product-title -->
 												</div><!-- End .product -->
 											</td>
-											<td class="price-col">$84.00</td>
-											<td class="quantity-col">
-                                                <div class="cart-product-quantity">
-                                                    <input type="number" class="form-control" value="1" min="1" max="10" step="1" data-decimals="0" required>
-                                                </div><!-- End .cart-product-quantity -->
-                                            </td>
-											<td class="total-col">$84.00</td>
+											<td class="price-col">84.00 DH</td>
+											<td class="price-col">84.00 DH</td>
 											<td class="remove-col"><button class="btn-remove"><i class="icon-close"></i></button></td>
 										</tr>
 										<tr>
@@ -65,36 +59,16 @@
 													</figure>
 
 													<h3 class="product-title">
-														<a href="#">Robe en jean bleu style salopette utilitaire</a>
+														<a href="#">Chaussures de running élastiques tricotées de couleur beige</a>
 													</h3><!-- End .product-title -->
 												</div><!-- End .product -->
 											</td>
-											<td class="price-col">$76.00</td>
-											<td class="quantity-col">
-                                                <div class="cart-product-quantity">
-                                                    <input type="number" class="form-control" value="1" min="1" max="10" step="1" data-decimals="0" required>
-                                                </div><!-- End .cart-product-quantity -->                                 
-                                            </td>
-											<td class="total-col">$76.00</td>
+											<td class="price-col">84.00 DH</td>
+											<td class="price-col">84.00 DH</td>
 											<td class="remove-col"><button class="btn-remove"><i class="icon-close"></i></button></td>
 										</tr>
 									</tbody>
 								</table><!-- End .table table-wishlist -->
-
-	                			<div class="cart-bottom">
-			            			<div class="cart-discount">
-			            				<form action="#">
-			            					<div class="input-group" style="height: 40px;">
-				        						<input type="text" class="form-control" required placeholder="coupon code">
-				        						<div class="input-group-append">
-													<button class="btn btn-outline-primary-2" type="submit"><i class="icon-long-arrow-right"></i></button>
-												</div><!-- .End .input-group-append -->
-			        						</div><!-- End .input-group -->
-			            				</form>
-			            			</div><!-- End .cart-discount -->
-
-			            			<a href="#" class="btn btn-outline-dark-2"><span>MISE À JOUR DU PANIER</span><i class="icon-refresh"></i></a>
-		            			</div><!-- End .cart-bottom -->
 	                		</div><!-- End .col-lg-9 -->
 	                		<aside class="col-lg-3">
 	                			<div class="summary summary-cart">
@@ -103,60 +77,22 @@
 	                				<table class="table table-summary">
 	                					<tbody>
 	                						<tr class="summary-subtotal">
-	                							<td>Sous-total:</td>
-	                							<td>$160.00</td>
+	                							<td>Sous-total H.T :</td>
+	                							<td style="min-width: 100px;">160.00 DH</td>
 	                						</tr><!-- End .summary-subtotal -->
-	                						<tr class="summary-shipping">
-	                							<td>Shipping:</td>
-	                							<td>&nbsp;</td>
+											<tr class="summary-subtotal">
+	                							<td>Sous-total TTC :</td>
+	                							<td style="min-width: 100px;">160.00 DH</td>
 	                						</tr>
-
-	                						<tr class="summary-shipping-row">
-	                							<td>
-													<div class="custom-control custom-radio">
-														<input type="radio" id="free-shipping" name="shipping" class="custom-control-input">
-														<label class="custom-control-label" for="free-shipping">Livraison gratuite</label>
-													</div><!-- End .custom-control -->
-	                							</td>
-	                							<td>$0.00</td>
-	                						</tr><!-- End .summary-shipping-row -->
-
-	                						<tr class="summary-shipping-row">
-	                							<td>
-	                								<div class="custom-control custom-radio">
-														<input type="radio" id="standart-shipping" name="shipping" class="custom-control-input">
-														<label class="custom-control-label" for="standart-shipping">Standard:</label>
-													</div><!-- End .custom-control -->
-	                							</td>
-	                							<td>$10.00</td>
-	                						</tr><!-- End .summary-shipping-row -->
-
-	                						<tr class="summary-shipping-row">
-	                							<td>
-	                								<div class="custom-control custom-radio">
-														<input type="radio" id="express-shipping" name="shipping" class="custom-control-input">
-														<label class="custom-control-label" for="express-shipping">Express:</label>
-													</div><!-- End .custom-control -->
-	                							</td>
-	                							<td>$20.00</td>
-	                						</tr><!-- End .summary-shipping-row -->
-
-	                						<tr class="summary-shipping-estimate">
-	                							<td>Estimation pour votre pays<br> <a href="dashboard.html">Modifier l'adresse</a></td>
-	                							<td>&nbsp;</td>
-	                						</tr><!-- End .summary-shipping-estimate -->
-
-	                						<tr class="summary-total">
-	                							<td>Total:</td>
-	                							<td>$160.00</td>
-	                						</tr><!-- End .summary-total -->
 	                					</tbody>
 	                				</table><!-- End .table table-summary -->
 
 	                				<router-link :to="{ name: 'caisse' }" href="checkout.html" class="btn btn-outline-primary-2 btn-order btn-block">PASSER À LA CAISSE</router-link>
+									<a href="category.html" class="btn btn-outline-dark-2 btn-block mb-3 mt-3"><span>CONTINUER LES ACHATS</span><i class="icon-refresh"></i></a>
+									<router-link :to="{ name: 'caisse' }" href="checkout.html" class="btn btn-outline-primary-2 btn-order btn-block">TELECHARGER UN DEVIS</router-link>
 	                			</div><!-- End .summary -->
 
-		            			<a href="category.html" class="btn btn-outline-dark-2 btn-block mb-3"><span>CONTINUER LES ACHATS</span><i class="icon-refresh"></i></a>
+		            			
 	                		</aside><!-- End .col-lg-3 -->
 	                	</div><!-- End .row -->
 	                </div><!-- End .container -->
@@ -165,6 +101,9 @@
         </main><!-- End .main -->
 </template>
 <style scoped>
+.price-col {
+	font-weight: bold;
+}
 .breadcrumb {
     background: none !important;
     border-radius: 0;
@@ -267,5 +206,40 @@
 }
 .summary {
     text-align: left;
+}
+/* Media query */
+@media screen and (max-width: 768px) {}
+@media screen and (max-width: 991px) {
+	.page-content {
+    padding: 17px;
+}
+	.table-mobile tr {
+    margin-bottom: 20px;
+	border: 1px solid #eef0f2;
+	padding-bottom: 1rem;
+}
+.table-mobile {
+    border: none;
+}
+.table td {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+.remove-col {
+	border: none;
+}
+.cart-bottom {
+	align-items: normal;
+}
+.cart-discount .btn {
+    min-width: 51px;
+}
+.icon-close {
+    background: #38aaf9;
+    padding: 3px;
+    border-radius: 50%;
+    color: white;
+    margin-bottom: 10px;
+}
 }
 </style>
