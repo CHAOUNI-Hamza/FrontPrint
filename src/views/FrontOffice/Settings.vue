@@ -1,5 +1,5 @@
 <template>
-    <div class="container new-arrivals pt-5">
+  <Navbar /><div class="container new-arrivals pt-5">
                 <div class="heading heading-flex mb-3">
                     <div class="heading-left">
                         <h2 class="title">Paramètre</h2><!-- End .title -->
@@ -239,6 +239,8 @@
                     </div>
                 </div>
             </div>
+    <Footer />
+    
 
 
 

@@ -1,7 +1,10 @@
 <template>
-    <Carousel />
+  <Navbar />
+  <Carousel />
   <Garanties />
   <Personnalise />
   <Client />
   <ProduitCat />
+    <Footer />
+    
 </template>

@@ -658,10 +658,10 @@
 
   </template>
   <script>
-//import { reactive } from 'vue' // "from '@vue/composition-api'" if you are using Vue <2.7
 import { useVuelidate } from '@vuelidate/core'
 import { required, email, minLength, maxLength, sameAs } from '@vuelidate/validators'
 import { mapActions, mapGetters } from "vuex";
+import router from "@/router";
 export default {
   data() {
     return {
@@ -684,8 +684,7 @@ export default {
       },
       forgotPassword : {
         email: ''
-      },
-        errorMessage: null,
+      }
     }
   },
   validations() {
@@ -773,7 +772,7 @@ export default {
         ...mapActions({
             login: "Auth/signIn",
             register: "Auth/signUp",
-            forgout: "Auth/forgoutPassword",
+            forgot: "Auth/forgotPassword",
             signOut: "Auth/signOut",
         }),
         submit() {
@@ -783,7 +782,7 @@ export default {
             this.register(this.signUp);
         },
         submitForgot() {
-            this.forgout(this.forgotPassword)
+            this.forgot(this.forgotPassword)
         }
     },
     computed: {
@@ -792,6 +791,7 @@ export default {
             getErrorAuth: "Auth/getErrorAuth",
             getEmailNotExists: "Auth/getEmailNotExists",
             authenticated: "Auth/authenticated",
+            getRoleAuth: "Auth/getRoleAuth",
         }),
     },
 }
@@ -801,24 +801,11 @@ export default {
   .nav-link {
     font-size: 1.7rem !important;
 }
-.input-errors {
-    margin-bottom: 10px;
-}
-  .error {
-    border: 1px solid #ff0018 !important;
-  }
-  .input-errors .error-msg {
-    background: red;
-    padding: 4px 11px;
-    color: white;
-    font-weight: 900;
-    border-radius: 9px;
-  }
 .header-intro-clearance .header-bottom .container::after {
     height: 0;
 }
 .nav.nav-pills .nav-item.show .nav-link, .nav.nav-pills .nav-item .nav-link.active {
-    background: white;
+    background: #fafafa;
     color: #1f2d3d;
     border-bottom-color: #1f2d3d;
 }
@@ -826,7 +813,7 @@ export default {
     max-width: 575px;
     margin-left: auto;
     margin-right: auto;
-    background-color: #fff;
+    background-color: #fafafa;
     padding: 3.2rem 5rem 4.4rem;
     box-shadow: 0 3px 16px rgba(51,51,51,0.1);
 }
@@ -866,15 +853,15 @@ export default {
     top: 0.3rem;
     width: 1.6rem;
     height: 1.6rem;
-    background-color: #f9f9f9;
-    border: 1px solid #dadada;
+    background-color: #fafafa;
+    border: 1px solid #fafafa;
     box-shadow: none !important;
 }
 .modal .custom-checkbox .custom-control-label::after {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #fff;
+    color: #fafafa;
     background-image: none;
     font-size: 1rem;
     font-family: 'molla';

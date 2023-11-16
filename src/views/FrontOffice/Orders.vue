@@ -1,5 +1,5 @@
 <template>
-    <div class="orders container pt-5">
+  <Navbar /><div class="orders container pt-5">
       <div class="content">
         <form action="">
           <div class="row">
@@ -112,6 +112,8 @@
         </div>
       </div>
     </div>
+    <Footer />
+    
   </template>
   
   <style scoped>

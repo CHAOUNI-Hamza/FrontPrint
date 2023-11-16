@@ -1,5 +1,5 @@
 <template>
-    <main class="main">
+    <Navbar /><main class="main">
             <nav aria-label="breadcrumb" class="breadcrumb-nav border-0 mb-0">
                 <div class="container d-flex align-items-center">
                     <ol class="breadcrumb">
@@ -267,6 +267,8 @@
                 </div><!-- End .container -->
             </div><!-- End .page-content -->
         </main><!-- End .main -->
+    <Footer />
+    
 </template>
 <style scoped>
 .breadcrumb {

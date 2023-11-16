@@ -1,0 +1,15 @@
+.input-errors {
+    margin-bottom: 10px !important;
+}
+  .error {
+    border: 1px solid #ff0018 !important;
+    margin-bottom: 5px !important;
+  }
+  .input-errors .error-msg {
+    background: #ff0018;
+    padding: 4px 11px;
+    color: white;
+    font-weight: 900;
+    border-radius: 9px;
+    font-size: 10px;
+  }

@@ -1,5 +1,5 @@
 <template>
-    <div class="login-page bg-image pt-8 pb-8 pt-md-12 pb-md-12 pt-lg-17 pb-lg-17">
+    <Navbar /><div class="login-page bg-image pt-8 pb-8 pt-md-12 pb-md-12 pt-lg-17 pb-lg-17">
             	<div class="container">
             		<div class="form-box">
             			<div class="form-tab">
@@ -50,6 +50,8 @@
             		</div><!-- End .form-box -->
             	</div><!-- End .container -->
             </div>
+    <Footer />
+    
 </template>
 <script>
 import { useVuelidate } from '@vuelidate/core'

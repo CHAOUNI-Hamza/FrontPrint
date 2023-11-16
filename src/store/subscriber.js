@@ -12,6 +12,14 @@ store.subscribe((mutation) => {
       localStorage.removeItem('token');
     }
   }
+
+  if (mutation.type === "Auth/setRoleAuth") {
+    if (mutation.payload) {
+        localStorage.setItem('roleAuth', mutation.payload);
+    } else {
+        localStorage.removeItem('roleAuth');
+    }
+}
 });
 
 

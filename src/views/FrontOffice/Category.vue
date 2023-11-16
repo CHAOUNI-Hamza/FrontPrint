@@ -1,5 +1,5 @@
 <template>
-    <main class="main">
+    <Navbar /><main class="main">
         	<div class="page-header text-center" style="background-image: url('https://www.olivierchristinat.com/sites/default/files/styles/large/public/photos/_mg_7578-modifier.jpg?itok=qdDie4iu')">
         		<div class="container">
         			<h1 class="page-title">Categories<span>Magasiner</span></h1>
@@ -81,6 +81,8 @@
                 </div><!-- End .container -->
             </div><!-- End .page-content -->
         </main><!-- End .main -->
+    <Footer />
+    
 </template>
 <style scoped>
 
